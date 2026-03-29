@@ -67,23 +67,27 @@
                     "assert"))
         (builtins (append
                     '("print" "probe" "compose" "reduce" "apply"
-                      "select" "first" "second" "last" "pick"
+                      "select" "first" "second" "last" "pick" "find" "reverse"
                       "append" "insert" "remove" "copy" "sort"
                       "has?" "index?" "is?"
                       "size?" "length?" "empty?" "type"
                       "odd?" "even?" "number?" "function?" "frozen?"
                       "min" "max" "abs" "negate" "round" "sqrt"
+                      "sin" "cos" "tan" "asin" "acos" "atan2"
+                      "pow" "exp" "log" "log10"
+                      "floor" "ceil" "to-degrees" "to-radians"
+                      "random" "pi"
                       "join" "rejoin" "replace" "split" "trim"
                       "uppercase" "lowercase"
                       "starts-with?" "ends-with?" "substring"
                       "context" "object" "bind" "words-of" "set"
                       "freeze" "make" "to"
                       "charset" "union" "intersect"
-                      "load" "require" "save" "exports"
-                      "read-file" "write-file"
+                      "load" "import" "save" "exports"
+                      "read-file" "write-file" "read-dir" "dir?" "file?" "exit"
                       "error" "rethrow" "now"
-                      ;; Preprocess
-                      "emit" "platform")
+                      ;; Preprocess / compile-time
+                      "emit" "raw" "platform")
                     ;; Generated: integer? float? string? etc.
                     (mapcar (lambda (name) (concat name "?"))
                             kintsugi--type-names))))
