@@ -84,7 +84,7 @@
                       "freeze" "make" "to"
                       "charset" "union" "intersect"
                       "load" "import" "save" "exports"
-                      "read-file" "write-file" "read-dir" "dir?" "file?" "exit"
+                      "read" "write" "dir?" "file?" "exit"
                       "error" "rethrow" "now"
                       ;; Preprocess / compile-time
                       "emit" "raw" "platform")
