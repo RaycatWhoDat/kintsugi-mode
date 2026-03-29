@@ -127,8 +127,8 @@
       (,(regexp-opt control 'symbols) . font-lock-keyword-face)
       ;; Builtins
       (,(regexp-opt builtins 'symbols) . font-lock-builtin-face)
-      ;; Header keyword (Kintsugi with optional dialect)
-      ("^Kintsugi\\(?:/[[:alpha:]]+\\)?" . font-lock-keyword-face)))
+      ;; Header keyword
+      ("^Kintsugi\\b" . font-lock-keyword-face)))
   "Font-lock keywords for `kintsugi-mode'.")
 
 (defun kintsugi-indent-line ()
