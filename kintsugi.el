@@ -48,7 +48,7 @@
 
 (defconst kintsugi-font-lock-keywords
   (let ((control '("if" "either" "unless" "loop" "break" "return"
-                    "function" "do" "try" "match" "attempt" "parse"
+                    "function" "does" "do" "try" "match" "attempt" "parse"
                     "not" "and" "or" "all" "any"
                     ;; Loop dialect keywords
                     "for" "in" "from" "to" "by" "when"
@@ -80,6 +80,7 @@
                       "join" "rejoin" "replace" "split" "trim"
                       "uppercase" "lowercase"
                       "starts-with?" "ends-with?" "substring"
+                      "byte" "char"
                       "context" "object" "bind" "words-of" "set"
                       "freeze" "make" "to"
                       "charset" "union" "intersect"
