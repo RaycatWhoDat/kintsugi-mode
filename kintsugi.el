@@ -69,7 +69,7 @@
                     '("print" "probe" "compose" "reduce" "apply"
                       "select" "first" "second" "last" "pick" "find" "reverse"
                       "append" "insert" "remove" "copy" "sort"
-                      "has?" "index?" "is?"
+                      "has?" "is?"
                       "size?" "length?" "empty?" "type"
                       "odd?" "even?" "number?" "function?" "frozen?"
                       "min" "max" "abs" "negate" "round" "sqrt"
@@ -86,7 +86,7 @@
                       "charset" "union" "intersect"
                       "load" "import" "save" "exports"
                       "read" "write" "dir?" "file?" "exit"
-                      "error" "rethrow" "now"
+                      "error" "rethrow" "now" "system"
                       ;; Preprocess / compile-time
                       "emit" "raw" "platform")
                     ;; Generated: integer? float? string? etc.
