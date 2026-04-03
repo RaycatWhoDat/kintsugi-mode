@@ -51,7 +51,7 @@
                     "function" "does" "try" "match" "attempt" "scope"
                     "not" "and" "or" "all" "any"
                     ;; Loop dialect keywords
-                    "for" "in" "from" "to" "by" "when"
+                    "for" "in" "from" "to" "by" "when" "do"
                     ;; Parse dialect keywords
                     "some" "opt" "ahead" "into" "thru" "skip" "end"
                     "collect" "keep" "fail" "quote"
@@ -71,7 +71,7 @@
                       "append" "insert" "remove" "copy" "sort"
                       "has?" "is?"
                       "size?" "length?" "empty?" "type"
-                      "odd?" "even?" "number?" "function?" "frozen?"
+                      "odd?" "even?" "number?" "function?"
                       "min" "max" "abs" "negate" "round" "sqrt"
                       "sin" "cos" "tan" "asin" "acos" "atan2"
                       "pow" "exp" "log" "log10"
@@ -81,12 +81,12 @@
                       "uppercase" "lowercase"
                       "starts-with?" "ends-with?" "substring"
                       "byte" "char"
-                      "context" "object" "words-of" "set"
-                      "freeze" "make" "to"
+                      "context" "prototype" "words-of" "set" "merge"
+                      "make" "to" "using"
                       "charset" "union" "intersect"
                       "load" "import" "save" "exports"
                       "read" "write" "dir?" "file?" "exit"
-                      "error" "rethrow" "now" "system"
+                      "error" "rethrow" "now" "time" "date" "system"
                       "pad" "capture"
                       ;; Preprocess / compile-time
                       "emit" "raw")
@@ -109,8 +109,8 @@
       ;; File literals (including quoted: %"path with spaces")
       ("%\"[^\"]*\"" . font-lock-string-face)
       ("%[^] \t\n[(){}]+" . font-lock-string-face)
-      ;; Money literals ($19.99, $0.00)
-      ("\\$[0-9]+\\(?:\\.[0-9]+\\)?" . font-lock-constant-face)
+      ;; Money literals ($19.99, -$0.50)
+      ("-?\\$[0-9]+\\(?:\\.[0-9]+\\)?" . font-lock-constant-face)
       ;; Pair literals (NxN)
       ("\\b[0-9]+x[0-9]+\\b" . font-lock-constant-face)
       ;; Logic and none (true/false are keywords, on/off/yes/no are words bound to logic)
