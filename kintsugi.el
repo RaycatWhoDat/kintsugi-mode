@@ -87,8 +87,9 @@
                       "load" "import" "save" "exports"
                       "read" "write" "dir?" "file?" "exit"
                       "error" "rethrow" "now" "system"
+                      "pad" "capture"
                       ;; Preprocess / compile-time
-                      "emit" "raw" "platform")
+                      "emit" "raw")
                     ;; Generated: integer? float? string? etc.
                     (mapcar (lambda (name) (concat name "?"))
                             kintsugi--type-names))))
