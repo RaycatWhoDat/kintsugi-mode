@@ -48,7 +48,7 @@
 
 (defconst kintsugi-font-lock-keywords
   (let ((control '("if" "either" "unless" "loop" "break" "return"
-                    "function" "does" "do" "try" "match" "attempt" "parse"
+                    "function" "does" "try" "match" "attempt" "scope"
                     "not" "and" "or" "all" "any"
                     ;; Loop dialect keywords
                     "for" "in" "from" "to" "by" "when"
@@ -66,7 +66,7 @@
                     ;; Assert
                     "assert"))
         (builtins (append
-                    '("print" "probe" "compose" "reduce" "apply"
+                    '("print" "probe" "reduce" "apply"
                       "select" "first" "second" "last" "pick" "find" "reverse"
                       "append" "insert" "remove" "copy" "sort"
                       "has?" "is?"
@@ -81,7 +81,7 @@
                       "uppercase" "lowercase"
                       "starts-with?" "ends-with?" "substring"
                       "byte" "char"
-                      "context" "object" "bind" "words-of" "set"
+                      "context" "object" "words-of" "set"
                       "freeze" "make" "to"
                       "charset" "union" "intersect"
                       "load" "import" "save" "exports"
@@ -94,11 +94,7 @@
                     (mapcar (lambda (name) (concat name "?"))
                             kintsugi--type-names))))
     `(
-      ;; Directives (#preprocess, #[expr])
-      ("#\\(?:preprocess\\|inline\\)" . font-lock-preprocessor-face)
-      ;; Inline preprocess #[expr]
-      ("#\\[" . font-lock-preprocessor-face)
-      ;; Meta-words (@enter, @exit, @type, @type/enum, @type/where, @const)
+      ;; Meta-words (@type, @const, @global, @macro, @compose, @parse, @preprocess, etc.)
       ;; Not preceded by alnum (that's email)
       ("\\(?:^\\|[^[:alnum:]._-]\\)\\(@[[:alpha:]][[:alnum:]_?!~/-]*\\)"
        1 font-lock-preprocessor-face)
