@@ -40,7 +40,7 @@
   '("integer" "float" "money" "string" "logic" "none"
     "pair" "tuple" "date" "time" "file"
     "url" "email" "word" "set-word" "get-word" "lit-word" "meta-word"
-    "path" "block" "paren" "map" "set" "context" "object" "function"
+    "path" "block" "paren" "map" "set" "context" "prototype" "function"
     "native" "op" "type"
     ;; Union types
     "any-type" "number" "any-word" "any-block" "scalar")
