@@ -94,7 +94,7 @@
                     (mapcar (lambda (name) (concat name "?"))
                             kintsugi--type-names))))
     `(
-      ;; Meta-words (@type, @const, @shared, @macro, @compose, @parse, @preprocess, etc.)
+      ;; Meta-words (@type, @const, @macro, @compose, @parse, @preprocess, etc.)
       ;; Not preceded by alnum (that's email)
       ("\\(?:^\\|[^[:alnum:]._-]\\)\\(@[[:alpha:]][[:alnum:]_?!~/-]*\\)"
        1 font-lock-preprocessor-face)
