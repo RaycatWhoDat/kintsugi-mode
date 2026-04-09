@@ -40,7 +40,7 @@
   '("integer" "float" "money" "string" "logic" "none"
     "pair" "tuple" "date" "time" "file"
     "url" "email" "word" "set-word" "get-word" "lit-word" "meta-word"
-    "path" "block" "paren" "map" "set" "context" "prototype" "function"
+    "path" "block" "paren" "map" "set" "context" "object" "function"
     "native" "op" "type"
     ;; Union types
     "any-type" "number" "any-word" "any-block" "scalar")
@@ -81,7 +81,7 @@
                       "uppercase" "lowercase"
                       "starts-with?" "ends-with?" "substring"
                       "byte" "char"
-                      "context" "prototype" "words-of" "set" "merge"
+                      "context" "object" "freeze" "frozen?" "words-of" "set" "merge"
                       "make" "to" "using"
                       "charset" "union" "intersect"
                       "load" "import" "save" "exports"
@@ -94,7 +94,7 @@
                     (mapcar (lambda (name) (concat name "?"))
                             kintsugi--type-names))))
     `(
-      ;; Meta-words (@type, @const, @global, @macro, @compose, @parse, @preprocess, etc.)
+      ;; Meta-words (@type, @const, @shared, @macro, @compose, @parse, @preprocess, etc.)
       ;; Not preceded by alnum (that's email)
       ("\\(?:^\\|[^[:alnum:]._-]\\)\\(@[[:alpha:]][[:alnum:]_?!~/-]*\\)"
        1 font-lock-preprocessor-face)
