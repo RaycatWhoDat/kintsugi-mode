@@ -49,7 +49,7 @@
 (defconst kintsugi-font-lock-keywords
   (let ((control '("if" "either" "unless" "loop" "break" "return"
                     "function" "does" "try" "match" "attempt" "scope"
-                    "not" "and" "or" "all" "any"
+                    "not" "and" "or" "all?" "any?"
                     ;; Loop dialect keywords
                     "for" "in" "from" "to" "by" "when" "do"
                     ;; Parse dialect keywords
@@ -70,7 +70,7 @@
                       "select" "first" "second" "last" "pick" "find" "reverse"
                       "append" "insert" "remove" "copy" "sort"
                       "has?" "is?"
-                      "size?" "length?" "empty?" "type"
+                      "length" "empty?" "type"
                       "odd?" "even?" "number?" "function?"
                       "min" "max" "abs" "negate" "round" "sqrt"
                       "sin" "cos" "tan" "asin" "acos" "atan2"
@@ -81,7 +81,7 @@
                       "uppercase" "lowercase"
                       "starts-with?" "ends-with?" "substring"
                       "byte" "char"
-                      "context" "object" "freeze" "frozen?" "words-of" "set" "merge"
+                      "context" "object" "freeze" "frozen?" "words" "set" "merge"
                       "make" "to" "using"
                       "charset" "union" "intersect"
                       "load" "import" "save" "exports"
