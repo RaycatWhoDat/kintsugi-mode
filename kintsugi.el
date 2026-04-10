@@ -40,8 +40,8 @@
   '("integer" "float" "money" "string" "logic" "none"
     "pair" "tuple" "date" "time" "file"
     "url" "email" "word" "set-word" "get-word" "lit-word" "meta-word"
-    "path" "block" "paren" "map" "set" "context" "object" "function"
-    "native" "op" "type"
+    "block" "paren" "map" "set" "context" "object" "function"
+    "native" "op" "type" "frozen"
     ;; Union types
     "any-type" "number" "any-word" "any-block" "scalar")
   "Type names without ! suffix.")
@@ -51,7 +51,7 @@
                     "function" "does" "try" "match" "attempt" "scope"
                     "not" "and" "or" "all?" "any?"
                     ;; Loop dialect keywords
-                    "for" "in" "from" "to" "by" "when" "do"
+                    "for" "in" "from" "to" "by" "when" "do" "it"
                     ;; Parse dialect keywords
                     "some" "opt" "ahead" "into" "thru" "skip" "end"
                     "collect" "keep" "fail" "quote"
