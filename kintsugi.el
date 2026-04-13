@@ -79,7 +79,7 @@
                       "random" "pi"
                       "join" "rejoin" "replace" "split" "trim"
                       "uppercase" "lowercase"
-                      "starts-with?" "ends-with?" "substring"
+                      "starts-with?" "ends-with?" "subset"
                       "byte" "char"
                       "context" "object" "freeze" "frozen?" "words" "set" "merge"
                       "make" "to" "using"
