@@ -52,9 +52,6 @@
                     "not" "and" "or" "all?" "any?"
                     ;; Loop dialect keywords
                     "for" "in" "from" "to" "by" "when" "do" "it"
-                    ;; Parse dialect keywords
-                    "some" "opt" "ahead" "into" "thru" "skip" "end"
-                    "collect" "keep" "fail" "quote"
                     ;; Attempt dialect keywords
                     "source" "then" "fallback" "retries" "catch"
                     ;; Match dialect keywords
@@ -111,8 +108,8 @@
       ("%[^] \t\n[(){}]+" . font-lock-string-face)
       ;; Money literals ($19.99, -$0.50)
       ("-?\\$[0-9]+\\(?:\\.[0-9]+\\)?" . font-lock-constant-face)
-      ;; Pair literals (NxN)
-      ("\\b[0-9]+x[0-9]+\\b" . font-lock-constant-face)
+      ;; Pair literals (NxN, with optional decimals and negative second component)
+      ("-?[0-9]+\\(?:\\.[0-9]+\\)?x-?[0-9]+\\(?:\\.[0-9]+\\)?" . font-lock-constant-face)
       ;; Logic and none (true/false are keywords, on/off/yes/no are words bound to logic)
       (,(regexp-opt '("true" "false" "on" "off" "yes" "no" "none") 'symbols)
        . font-lock-constant-face)
