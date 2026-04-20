@@ -118,8 +118,9 @@
        . font-lock-constant-face)
       ;; Set-words (word:) — before type names so word!: gets set-word face
       ("\\_<[[:alpha:]][[:alnum:]_?!~-]*:" . font-lock-variable-name-face)
-      ;; Type names (word!)
-      ("\\_<[[:alpha:]][[:alnum:]_-]*!" . font-lock-type-face)
+      ;; Type names (word!) — `/` permitted inside so enum singleton
+      ;; types like `direction/north!` highlight as a single type.
+      ("\\_<[[:alpha:]][[:alnum:]_/-]*!" . font-lock-type-face)
       ;; Lit-words ('word)
       ("'[[:alpha:]][[:alnum:]_?!~-]*" . font-lock-constant-face)
       ;; Get-words (:word)
