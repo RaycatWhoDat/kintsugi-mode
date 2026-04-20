@@ -57,7 +57,10 @@
                     ;; Match dialect keywords
                     "default"
                     ;; Object dialect keywords
-                    "fields" "required" "optional"
+                    "fields" "required" "optional" "include"
+                    ;; @game dialect keywords
+                    "entity" "collide" "collide/using" "on-update"
+                    "constants" "state" "tags"
                     ;; Bindings dialect
                     "bindings" "import"
                     ;; Assert
@@ -80,10 +83,10 @@
                       "byte" "char"
                       "context" "object" "freeze" "frozen?" "words" "set" "merge"
                       "make" "to" "using"
-                      "charset" "union" "intersect"
+                      "union" "intersect"
                       "load" "import" "save" "exports"
                       "read" "write" "dir?" "file?" "exit"
-                      "error" "rethrow" "now" "time" "date" "system"
+                      "error" "now" "time" "date" "system"
                       "pad" "capture"
                       ;; Preprocess / compile-time
                       "emit" "raw")
@@ -91,7 +94,7 @@
                     (mapcar (lambda (name) (concat name "?"))
                             kintsugi--type-names))))
     `(
-      ;; Meta-words (@type, @const, @macro, @compose, @parse, @preprocess, etc.)
+      ;; Meta-words (@type, @const, @template, @compose, @preprocess, etc.)
       ;; Not preceded by alnum (that's email)
       ("\\(?:^\\|[^[:alnum:]._-]\\)\\(@[[:alpha:]][[:alnum:]_?!~/-]*\\)"
        1 font-lock-preprocessor-face)
